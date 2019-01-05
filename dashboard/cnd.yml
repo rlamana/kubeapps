@@ -1,0 +1,9 @@
+swap:
+  deployment:
+    name: kubeapps-internal-dashboard
+    container: dashboard
+    image: ramiro/dashboard-dev:0.1.4
+    command: ["sh", "-c", "yarn install && yarn run start"]
+mount:
+  source: .
+  target: /app
